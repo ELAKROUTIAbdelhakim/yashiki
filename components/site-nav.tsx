@@ -22,7 +22,7 @@ export default function SiteNav({ light = false }: SiteNavProps) {
   const pathname = usePathname();
 
   const shell = light
-    ? "border border-[rgba(246,241,232,0.16)] bg-[rgba(246,241,232,0.06)] text-[rgba(246,241,232,0.86)]"
+    ? "border border-[rgba(246,241,232,0.2)] bg-[rgba(20,23,21,0.34)] text-[rgba(246,241,232,0.96)] shadow-[0_12px_34px_rgba(0,0,0,0.2)]"
     : "border border-[rgba(36,46,39,0.1)] bg-[rgba(251,247,241,0.84)] text-[var(--ink-muted)]";
 
   const hover = light ? "hover:text-white" : "hover:text-[var(--ink)]";
@@ -59,7 +59,7 @@ export default function SiteNav({ light = false }: SiteNavProps) {
               className={`rounded-full px-4 py-2 transition ${hover} ${
                 active
                   ? light
-                    ? "bg-[rgba(246,241,232,0.12)] text-white"
+                    ? "bg-[rgba(246,241,232,0.16)] text-white"
                     : "bg-[rgba(36,46,39,0.06)] text-[var(--ink)]"
                   : ""
               }`}

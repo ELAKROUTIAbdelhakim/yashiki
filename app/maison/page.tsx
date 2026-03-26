@@ -87,7 +87,7 @@ export default function MaisonPage() {
         <Reveal>
           <div className="max-w-2xl">
             <p className="section-label">La maison</p>
-            <h1 className="mt-4 max-w-[9ch] text-[clamp(3.2rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.06em] text-[var(--ink)]">
+            <h1 className="mt-4 max-w-[12ch] text-[clamp(3.2rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.06em] text-[var(--ink)]">
               Une maison japonaise contemporaine, ancrée dans le service du soir.
             </h1>
             <p className="mt-8 max-w-[40rem] text-[17px] leading-9 text-[var(--ink-muted)]">
@@ -329,7 +329,7 @@ export default function MaisonPage() {
                 <p className="text-[11px] uppercase tracking-[0.3em] text-[var(--sage)]">
                   Google Maps
                 </p>
-                <h2 className="mt-3 max-w-[10ch] text-[clamp(2.3rem,4vw,4rem)] leading-[0.95] tracking-[-0.05em] text-[var(--ink)]">
+                <h2 className="mt-3 max-w-[14ch] text-[clamp(2.3rem,4vw,4rem)] leading-[0.95] tracking-[-0.05em] text-[var(--ink)]">
                   Trouver la maison en un regard.
                 </h2>
                 <p className="mt-5 max-w-xl text-sm leading-7 text-[var(--ink-muted)]">

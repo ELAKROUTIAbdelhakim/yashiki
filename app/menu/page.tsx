@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import MobileBookingBar from "@/components/mobile-booking-bar";
+import MenuItemCard from "@/components/menu-item-card";
 import Reveal from "@/components/reveal";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -29,7 +30,7 @@ export default function MenuPage() {
             <div className="grid gap-10 lg:grid-cols-[0.94fr_1.06fr] lg:items-end">
               <div>
                 <p className="section-label">La carte complète</p>
-                <h1 className="mt-5 max-w-[8ch] text-[clamp(3.2rem,7vw,6.8rem)] leading-[0.9] tracking-[-0.06em] text-[var(--ink)]">
+                <h1 className="mt-5 max-w-[12ch] text-[clamp(3.2rem,7vw,6.8rem)] leading-[0.9] tracking-[-0.06em] text-[var(--ink)]">
                   La carte du soir.
                 </h1>
                 <p className="mt-6 max-w-xl text-[17px] leading-9 text-[var(--ink-muted)]">
@@ -91,7 +92,7 @@ export default function MenuPage() {
                   <p className="text-[11px] uppercase tracking-[0.3em] text-[var(--sage)]">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="mt-5 max-w-[8ch] text-[clamp(2.6rem,5vw,4.8rem)] leading-[0.92] tracking-[-0.06em] text-[var(--ink)]">
+                  <h2 className="mt-5 max-w-[12ch] text-[clamp(2.6rem,5vw,4.8rem)] leading-[0.92] tracking-[-0.06em] text-[var(--ink)]">
                     {section.title}
                   </h2>
                   <p className="mt-6 max-w-md text-[15px] leading-8 text-[var(--ink-muted)]">
@@ -119,37 +120,7 @@ export default function MenuPage() {
 
                 <div className="space-y-4 bg-[rgba(255,255,255,0.62)] px-6 py-8 sm:px-8 lg:px-10 lg:py-12">
                   {section.items.map((item) => (
-                    <article
-                      key={item.name}
-                      className="rounded-[1.5rem] border border-[rgba(36,46,39,0.08)] bg-[rgba(251,247,241,0.72)] px-5 py-5 transition duration-300 hover:border-[rgba(90,110,97,0.2)] hover:bg-white"
-                    >
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="min-w-0">
-                          <h3 className="text-xl leading-[1.05] tracking-[-0.03em] text-[var(--ink)]">
-                            {item.name}
-                          </h3>
-                          <p className="mt-3 text-sm leading-7 text-[var(--ink-muted)]">
-                            {item.description}
-                          </p>
-                          {item.badges?.length ? (
-                            <div className="mt-4 flex flex-wrap gap-2">
-                              {item.badges.map((badge) => (
-                                <span
-                                  key={badge}
-                                  className="rounded-full border border-[rgba(36,46,39,0.1)] bg-[rgba(245,238,228,0.7)] px-3 py-2 text-[10px] uppercase tracking-[0.22em] text-[var(--sage-deep)]"
-                                >
-                                  {badge}
-                                </span>
-                              ))}
-                            </div>
-                          ) : null}
-                        </div>
-
-                        <p className="shrink-0 rounded-full border border-[rgba(36,46,39,0.08)] px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-[var(--sage-deep)]">
-                          {item.price}€
-                        </p>
-                      </div>
-                    </article>
+                    <MenuItemCard key={item.name} item={item} />
                   ))}
                 </div>
               </div>

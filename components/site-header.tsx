@@ -11,7 +11,7 @@ export default function SiteHeader({
   overlay = false,
 }: SiteHeaderProps) {
   const shell = overlay
-    ? "absolute inset-x-0 top-0 z-30"
+    ? "absolute inset-x-0 top-0 z-30 bg-[linear-gradient(180deg,rgba(10,12,10,0.3)_0%,rgba(10,12,10,0)_100%)]"
     : "sticky top-0 z-40 border-b border-[rgba(36,46,39,0.08)] bg-[rgba(251,247,241,0.84)] backdrop-blur-xl";
 
   return (

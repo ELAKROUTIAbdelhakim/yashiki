@@ -24,7 +24,7 @@ export default function ReservationPage() {
             <div className="grid gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:items-end">
               <div>
                 <p className="section-label">Réserver</p>
-                <h1 className="mt-5 max-w-[8ch] text-[clamp(3.2rem,6.6vw,6.6rem)] leading-[0.9] tracking-[-0.06em] text-[var(--ink)]">
+                <h1 className="mt-5 max-w-[12ch] text-[clamp(3.2rem,6.6vw,6.6rem)] leading-[0.9] tracking-[-0.06em] text-[var(--ink)]">
                   Une table, un horaire, et c’est réglé.
                 </h1>
                 <p className="mt-6 max-w-2xl text-[17px] leading-9 text-[var(--ink-muted)]">
